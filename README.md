@@ -8,7 +8,7 @@ Sync GitHub Repository to AWS CodeCommit using with AWS credentials.
 
 ## Example
 
-```
+```yaml
 name: aws-codecommit-sync
 
 on:

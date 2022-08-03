@@ -12,6 +12,10 @@ on:
       codecommit_url:
         required: true
         type: string
+      version:
+        required: false
+        type: string
+        default: 'main'
     secrets:
       token:
         required: true
@@ -30,6 +34,6 @@ jobs:
           role-to-assume: ${{ inputs.role-to-assume }}
           aws-region: ${{ inputs.aws-region }}
       - name: Sync GitHub Repository to AWS CodeCommit
-        uses: topotal/aws-codecommit-sync-action@0.2.1
+        uses: topotal/aws-codecommit-sync-action@${{ inputs.version }}
         with:
           codecommit_url: ${{ inputs.codecommit_url }}

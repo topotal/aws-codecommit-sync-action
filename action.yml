@@ -1,0 +1,11 @@
+name: aws-codecommit-sync-action
+description: 'Sync GitHub Codes to AWS CodeCommit'
+author: 'Ryota Yoshikawa <yoshikawa@topotal.com>'
+inputs:
+  codecommit_url:
+    description: CodeCommit repository URL.
+    required: true
+    type: string
+runs:
+  using: 'docker'
+  image: './Dockerfile'
